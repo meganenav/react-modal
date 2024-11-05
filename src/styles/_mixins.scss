@@ -1,0 +1,11 @@
+// Mixin for the modal theme
+@mixin theme-colors($bg-color, $border-color, $title-color, $message-color) {
+    background-color: $bg-color;
+    border: 4px solid $border-color;
+    .modal-title {
+        color: $title-color;
+    }
+    .modal-message {
+        color: $message-color;
+    }
+}

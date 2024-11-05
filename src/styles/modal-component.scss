@@ -1,0 +1,111 @@
+@use 'mixins';
+
+// Handles the background behind the modal
+dialog::backdrop {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+// Styles the modal globally
+.modal {
+	padding: 20px;
+	border-radius: 8px;
+	width: 400px;
+	max-width: 75%;
+	max-height: 75%;
+	flex-direction: column;
+	align-items: center;
+	z-index: 1000;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+	.modal-title {
+		font-size: 1.5em;
+
+		.modal-title-icon {
+			margin-right: 10px;
+		}
+	}
+
+	.modal-message {
+		font-size: 1em;
+		overflow-y: auto;
+	}
+
+	// Positions and styles the close icon for the modal
+	.modal-close {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		cursor: pointer;
+	}
+
+	&.show {
+		display: flex;
+	}
+
+	/* Theme definitions for modal background, border, and text colors */
+	/* Light theme */
+    &.light {
+        @include mixins.theme-colors(#f9f9f9, #585858, #333, #585858);
+    }
+
+	/* Dark theme */
+    &.dark {
+        @include mixins.theme-colors(#585858, #f9f9f9, #333, #f9f9f9);
+    }
+
+	/* Minimal theme */
+	&.minimal {
+		background-color: rgba(255,255,255,0.7);
+		border: 1px solid #ccc;
+
+		.modal-title,
+		.modal-message {
+			color: #000;
+		}
+	}
+
+	/* Mystic theme */
+	&.mystic {
+		@include mixins.theme-colors(#252E8A, #9A4D87, #9A4D87, #F7F6F7);
+	}
+
+	/* Tech theme */
+	&.tech {
+		@include mixins.theme-colors(#6157E1, #374854, #374854, #F7F6F7);
+	}
+
+	/* Candy theme */
+	&.candy {
+		@include mixins.theme-colors(#EF83B9, #FFDEF1, #FFDEF1, #FFFFFF);
+	}
+
+	/* Organic theme */
+	&.organic {
+		@include mixins.theme-colors(#FEFAE0, #5A7B38, #5A7B38, #9BD14B);
+	}
+
+	/* Urban theme */
+	&.urban {
+		@include mixins.theme-colors(#545454, #F5A941, #F5A941, #FFFFFF);
+	}
+
+	/* Coffee theme */
+	&.coffee {
+		@include mixins.theme-colors(#5B3509, #301900, #301900, #B38A56);
+	}
+
+	/* Success theme */
+	&.success {
+		@include mixins.theme-colors(#CBFFB5, #239E00, #239E00, #239E00);
+	}
+
+	/* Warning theme */
+	&.warning {
+		@include mixins.theme-colors(#FFC7C2, #C20000, #C20000, #C20000);
+	}
+
+	/* Information theme */
+	&.information {
+		@include mixins.theme-colors(#D1D8FF, #001DB0, #001DB0, #001DB0);
+	}
+}

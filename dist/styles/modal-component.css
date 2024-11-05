@@ -1,0 +1,168 @@
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/modal-component.scss ***!
+  \**************************************************************************************************************************/
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 75%;
+  max-height: 75%;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  /* Theme definitions for modal background, border, and text colors */
+  /* Light theme */
+  /* Dark theme */
+  /* Minimal theme */
+  /* Mystic theme */
+  /* Tech theme */
+  /* Candy theme */
+  /* Organic theme */
+  /* Urban theme */
+  /* Coffee theme */
+  /* Success theme */
+  /* Warning theme */
+  /* Information theme */
+}
+.modal .modal-title {
+  font-size: 1.5em;
+}
+.modal .modal-title .modal-title-icon {
+  margin-right: 10px;
+}
+.modal .modal-message {
+  font-size: 1em;
+  overflow-y: auto;
+}
+.modal .modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+.modal.show {
+  display: flex;
+}
+.modal.light {
+  background-color: #f9f9f9;
+  border: 4px solid #585858;
+}
+.modal.light .modal-title {
+  color: #333;
+}
+.modal.light .modal-message {
+  color: #585858;
+}
+.modal.dark {
+  background-color: #585858;
+  border: 4px solid #f9f9f9;
+}
+.modal.dark .modal-title {
+  color: #333;
+}
+.modal.dark .modal-message {
+  color: #f9f9f9;
+}
+.modal.minimal {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ccc;
+}
+.modal.minimal .modal-title,
+.modal.minimal .modal-message {
+  color: #000;
+}
+.modal.mystic {
+  background-color: #252E8A;
+  border: 4px solid #9A4D87;
+}
+.modal.mystic .modal-title {
+  color: #9A4D87;
+}
+.modal.mystic .modal-message {
+  color: #F7F6F7;
+}
+.modal.tech {
+  background-color: #6157E1;
+  border: 4px solid #374854;
+}
+.modal.tech .modal-title {
+  color: #374854;
+}
+.modal.tech .modal-message {
+  color: #F7F6F7;
+}
+.modal.candy {
+  background-color: #EF83B9;
+  border: 4px solid #FFDEF1;
+}
+.modal.candy .modal-title {
+  color: #FFDEF1;
+}
+.modal.candy .modal-message {
+  color: #FFFFFF;
+}
+.modal.organic {
+  background-color: #FEFAE0;
+  border: 4px solid #5A7B38;
+}
+.modal.organic .modal-title {
+  color: #5A7B38;
+}
+.modal.organic .modal-message {
+  color: #9BD14B;
+}
+.modal.urban {
+  background-color: #545454;
+  border: 4px solid #F5A941;
+}
+.modal.urban .modal-title {
+  color: #F5A941;
+}
+.modal.urban .modal-message {
+  color: #FFFFFF;
+}
+.modal.coffee {
+  background-color: #5B3509;
+  border: 4px solid #301900;
+}
+.modal.coffee .modal-title {
+  color: #301900;
+}
+.modal.coffee .modal-message {
+  color: #B38A56;
+}
+.modal.success {
+  background-color: #CBFFB5;
+  border: 4px solid #239E00;
+}
+.modal.success .modal-title {
+  color: #239E00;
+}
+.modal.success .modal-message {
+  color: #239E00;
+}
+.modal.warning {
+  background-color: #FFC7C2;
+  border: 4px solid #C20000;
+}
+.modal.warning .modal-title {
+  color: #C20000;
+}
+.modal.warning .modal-message {
+  color: #C20000;
+}
+.modal.information {
+  background-color: #D1D8FF;
+  border: 4px solid #001DB0;
+}
+.modal.information .modal-title {
+  color: #001DB0;
+}
+.modal.information .modal-message {
+  color: #001DB0;
+}
