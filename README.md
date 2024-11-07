@@ -1,9 +1,10 @@
-# Modal React Component
+# Custom Modal React Component
 React component which allows to display a customizable modal with different themes and parameters.
 
 ## Table of content
 
 - [Installation](#installation)
+- [Version](#version)
 - [Technologies](#technologies)
 - [Usage](#usage)
 - [Props](#props)
@@ -18,20 +19,26 @@ React component which allows to display a customizable modal with different them
 ## Installation
 
 ```bash
-npm install modal-react-component
+npm install custom-modal-react-component
 ```
 
+## Version
+
+This package is in version 0.0.0 (beta).
+
 ## Technologies
-- JavaScript
-- SCSS 
-- React
+- **JavaScript**
+- **SASS**: 1.80.5
+- **React**: 18.3.1
+- **React DOM**: 18.3.1
+- **Node**: 18.16.1
 
 ## Usage
 
 ```jsx
-import Modal from "modal-react-component"
-import "modal-react-component/dist/styles/modal-component.css"
-import closeIcon from "modal-react-component/dist/icons/close.svg" /* You can change the closeIcon path if it is different */
+import Modal from "custom-modal-react-component"
+import "custom-modal-react-component/dist/styles/modal-component.css"
+import closeIcon from "custom-modal-react-component/dist/icons/close.svg" /* You can change the closeIcon path if it is different */
 
 function App() {
 	const modalRef = useRef() 
@@ -108,7 +115,7 @@ A scrollbar appears if the content exceeds the modal height.
 To apply default styles, import the component's CSS:
 
 ```jsx
-import "modal-react-component/dist/styles/modal-component.css"
+import "custom-modal-react-component/dist/styles/modal-component.css"
 ```
 
 Several preset themes are available, go to the [next section](#themes) to check.
@@ -199,7 +206,11 @@ This project was conducted as part of a training course and is not open to exter
 
 ## Author
 
-Mégane Navarro
+Mégane Navarro (navarromegane@gmail.com)
+
+## Changelog
+
+v0.0.0 - Beta
 
 ## Licensing
 

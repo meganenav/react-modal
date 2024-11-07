@@ -1,12 +1,13 @@
 {
-  "name": "modal-react-component",
-  "version": "1.0.0",
+  "name": "custom-modal-react-component",
+  "version": "0.0.0",
   "description": "React component which allows to display a customizable modal with different themes and parameters.",
   "main": "dist/modal-component.js",
   "files": [
     "dist",
     "README.md",
-    "docs"
+    "docs",
+    "LICENSE"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
