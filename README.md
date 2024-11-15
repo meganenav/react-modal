@@ -25,7 +25,7 @@ npm install custom-modal-react-component
 
 ## Version
 
-This package is in version 1.0.0.
+This package is in version 1.0.1
 
 ## Technologies
 - **JavaScript**
@@ -231,7 +231,7 @@ Mégane Navarro (navarromegane@gmail.com)
 
 ## Changelog
 
-### [1.0.0] - 2024-11-15
+### [1.0.1] - 2024-11-15
 - First stable version
 - Adding a declaration file
 - Documentation improvement
