@@ -14,6 +14,7 @@ React component which allows to display a customizable modal with different them
 - [Themes](#themes)
 - [Contribution](#contribution)
 - [Author](#author)
+- [Changelog](#changelog)
 - [Licensing](#licensing)
 
 ## Installation
@@ -24,7 +25,7 @@ npm install custom-modal-react-component
 
 ## Version
 
-This package is in version 0.0.0 (beta).
+This package is in version 1.0.0.
 
 ## Technologies
 - **JavaScript**
@@ -36,6 +37,7 @@ This package is in version 0.0.0 (beta).
 ## Usage
 
 ```jsx
+import React, { useRef } from "react"
 import Modal from "custom-modal-react-component"
 import "custom-modal-react-component/dist/styles/modal-component.css"
 import closeIcon from "custom-modal-react-component/dist/icons/close.svg" /* You can change the closeIcon path if it is different */
@@ -43,13 +45,26 @@ import closeIcon from "custom-modal-react-component/dist/icons/close.svg" /* You
 function App() {
 	const modalRef = useRef() 
 
-	// Call modalRef.current.open() when you want the modal to open, for example after a form submission
-	if (modalRef.current) {
-		modalRef.current.open()
+	/* Call modalRef.current.open() when you want the modal to open, for example after a form submission.
+	   Only "if(modalRef.current)" and its content are mandatory, you can adapt this example for your own needs.
+	*/
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		if (modalRef.current) {
+			modalRef.current.open()
+		}
 	}
 
 	return (
-        <Modal ref={modalRef} title="Your title" message="Your message" theme="light" closeIconPath={closeIcon} />
+		<>
+			{/* Only the <Modal /> component with its required props is mandatory here, you can adapt this example for your own needs. */}
+			<Modal ref={modalRef} icon={Your icon path} title="Your title" message="Your message" theme="light" closeIconPath={closeIcon} />
+			<form onSubmit={handleSubmit}>
+			<label htmlFor="Field">Field</label>
+				<input type="text" />
+				<button>Submit</button>
+			</form>	
+		</>
 	)
 }
 ```
@@ -65,16 +80,22 @@ function App() {
 	</thead>
 	<tbody>
 		<tr>
-			<td>title</td>
+			<td>ref</td>
 			<td>String</td>
-			<td>No</td>
-			<td>Modal title</td>
+			<td>Yes</td>
+			<td>Reference which allows to use the modal, same constant name for useRef()</td>
 		</tr>
 		<tr>
 			<td>icon</td>
 			<td>String (URL Path)</td>
 			<td>No</td>
 			<td>Icon next to the title</td>
+		</tr>
+		<tr>
+			<td>title</td>
+			<td>String</td>
+			<td>No</td>
+			<td>Modal title</td>
 		</tr>
 		<tr>
 			<td>message</td>
@@ -101,7 +122,7 @@ function App() {
 
 A background is added behind the modal, preventing to interact with the back of the page.
 
-![Result in the page](docs/example_page.jpg)
+![Modal preview](docs/example_page.jpg)
 
 
 ## Global settings
@@ -210,7 +231,13 @@ Mégane Navarro (navarromegane@gmail.com)
 
 ## Changelog
 
-v0.0.0 - Beta
+### [1.0.0] - 2024-11-15
+- First stable version
+- Adding a declaration file
+- Documentation improvement
+
+### [0.0.0] - 2024-11-10
+- First Beta Version
 
 ## Licensing
 
